@@ -15,6 +15,7 @@
 #include <Adafruit_GFX.h>    // Core graphics library
 #include <Adafruit_ST7735.h> // Hardware-specific library for ST7735
 #include <DI_Defs.h> //general definitions
+#include <CapacitiveSensor.h>
 
 #include <Fonts/FreeSansBoldOblique9pt7b.h>
 #include <Fonts/FreeSansBold12pt7b.h>
@@ -38,6 +39,15 @@ extern int JOYSTICK_X;
 extern int JOYSTICK_Y;
 extern int KNOB_1;
 extern int KNOB_2;
+
+// Globals for Capacitive sensors
+extern CapacitiveSensor   CAPACITIVE_TOP;
+extern CapacitiveSensor   CAPACITIVE_MIDDLE;
+extern CapacitiveSensor   CAPACITIVE_BOTTOM;
+extern long CAP_VALUE_TOP;
+extern long CAP_VALUE_MIDDLE;
+extern long CAP_VALUE_BOTTOM;
+
 
 extern int LOOP_COUNTER;
 extern bool FIRST;
@@ -69,6 +79,7 @@ void updateTemperature(bool print=true);
 void updateButtons(bool print=true);
 void updateRFID(bool print=true);
 void updateKnobs();
+void updateCapacitiveSensors();
 
 
 

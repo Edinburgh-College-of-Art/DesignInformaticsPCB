@@ -17,6 +17,9 @@ Adafruit_ST7735 SCREEN = Adafruit_ST7735(TFT_CS, TFT_DC, TFT_RST);
 
 Adafruit_NeoPixel LEDS(INTERNAL_LED_WITH_RING_COUNT, INTERNAL_LED_PIN, NEO_GRB + NEO_KHZ800);
 
+CapacitiveSensor   CAPACITIVE_TOP = CapacitiveSensor(CAPACITIVE_RETURN_PIN,CAPACITIVE_TOP_PIN);        // Top one
+CapacitiveSensor   CAPACITIVE_MIDDLE = CapacitiveSensor(CAPACITIVE_RETURN_PIN,CAPACITIVE_MIDDLE_PIN);        // Middle
+CapacitiveSensor   CAPACITIVE_BOTTOM = CapacitiveSensor(CAPACITIVE_RETURN_PIN,CAPACITIVE_BOTTOM_PIN);        // Bottom
 
 // GLOBAL VARIABLES
 // Watchdog/loop
@@ -39,6 +42,11 @@ int JOYSTICK_X = 0;
 int JOYSTICK_Y = 0;
 int KNOB_1 = 0;
 int KNOB_2 = 0;
+
+// Capactive sensor data
+long CAP_VALUE_TOP = 0;
+long CAP_VALUE_MIDDLE = 0;
+long CAP_VALUE_BOTTOM = 0;
 
 
 // Check if things have been started
@@ -235,6 +243,12 @@ void updateKnobs() {
   JOYSTICK_Y = analogRead(JOYSTICK_Y_PIN);
   KNOB_1 = JOYSTICK_X;
   KNOB_2 = JOYSTICK_Y;
+}
+
+void updateCapacitiveSensors() {
+  CAP_VALUE_TOP = CAPACITIVE_TOP.capacitiveSensor(30);
+  CAP_VALUE_MIDDLE = CAPACITIVE_MIDDLE.capacitiveSensor(30);
+  CAP_VALUE_BOTTOM = CAPACITIVE_BOTTOM.capacitiveSensor(30);
 }
 
 
