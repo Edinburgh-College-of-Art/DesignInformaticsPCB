@@ -3,4 +3,4 @@
 Design Informatics PCB Arduino Library
 
 
-![Board Overview](BoadOverview.png)
+![Board Overview](BoardOverview.png)
