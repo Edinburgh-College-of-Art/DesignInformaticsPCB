@@ -29,6 +29,9 @@
 #define TFT_CS        8
 #define TFT_RST        0 // Or set to -1 and connect to Arduino RESET pin
 #define TFT_DC        9
+#define SCREEN_WIDTH 128
+#define SCREEN_HEIGHT 128
+
 
 // Joystick
 #define JOYSTICK_X_PIN  A0 //A2

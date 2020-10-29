@@ -48,6 +48,10 @@ long CAP_VALUE_TOP = 0;
 long CAP_VALUE_MIDDLE = 0;
 long CAP_VALUE_BOTTOM = 0;
 
+// IMU values
+float ACCEL_X, ACCEL_Y, ACCEL_Z;
+float GYRO_X, GYRO_Y, GYRO_Z;
+
 
 // Check if things have been started
 bool _SPI_STARTED = false;
@@ -138,7 +142,14 @@ void startTemperature(bool print) {
   if( print ) Serial.println("OK");
 }
 
-
+void startIMU(bool print) {
+  if (!IMU.begin()) {
+    if(print) Serial.println("Failed to initialize IMU!");
+  }
+  else {
+    if( print) Serial.println("IMU initialized!");
+  }
+}
 /*
  *****************************************
  * UPDATE FUNCTIONS
@@ -249,6 +260,13 @@ void updateCapacitiveSensors() {
   CAP_VALUE_TOP = CAPACITIVE_TOP.capacitiveSensor(30);
   CAP_VALUE_MIDDLE = CAPACITIVE_MIDDLE.capacitiveSensor(30);
   CAP_VALUE_BOTTOM = CAPACITIVE_BOTTOM.capacitiveSensor(30);
+}
+
+void updateIMU() {
+  if ( IMU.accelerationAvailable() && IMU.gyroscopeAvailable() ) {
+    IMU.readAcceleration(ACCEL_X, ACCEL_Y, ACCEL_Z);
+    IMU.readGyroscope(GYRO_X, GYRO_Y, GYRO_Z);
+  }
 }
 
 
