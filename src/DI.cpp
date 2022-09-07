@@ -57,9 +57,7 @@ float GYRO_X, GYRO_Y, GYRO_Z;
 bool _SPI_STARTED = false;
 
 void setupEverything(bool print) {
-  // put your setup code here, to run once:
-  Serial.begin(9600);   // Initialize serial communications with the PC
-  while (!Serial);    // Do nothing if no serial port is opened (added for Arduinos based on ATMEGA32U4)
+  // put your setup code here, to run once:  
   Serial.print("Starting everything... Printing: ");
   Serial.println(print);
   startScreen(print);
