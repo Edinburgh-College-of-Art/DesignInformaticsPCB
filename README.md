@@ -38,7 +38,24 @@ To try an make the learning curve a bit easier, the library sets up all of the d
 ## Connections
 
 Connections for the various ports and functions
-![Connections](Connections.png)
+<!-- ![Connections](Connections.png) -->
+
+|             | `GND` | `3.3v` | `5v` | `RST` | `D0 / Tx` | `D1 / Rx` | `D2` | `D3` | `D4` | `D5` | `D6` | `D7` | `D8` | `D9 ` | `D10` | `D11 / MOSI` | `D12 / MISO` | `D13 / SCK` | `D14 / A0` | `D15 / A10` | `D16 / A19` | `D17 / A18` | `D18 / SDA` | `D19 / SCL` | `D20` | `D21 / A11` | working |
+| ----------- | ----- | ------ | ---- | ----- | --------- | --------- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ----- | ----- | ------------ | ------------ | ----------- | ---------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----- | ----------- | ------- |
+| ST6635      | x     | x      |      | RST   |           |           |      |      |      |      |      | CCS  | TCS  | DC    |       | SI           | SO           | SCL         |            |             |             |             |             |             |       |             | Y       |
+| RC522       | x     | x      |      | RST   |           |           |      |      |      |      |      |      |      |       | SDA   | SI           | SO           | SCL         |            |             |             |             |             |             |       |             | Y       |
+| Grove BTN   | x     | x      |      |       |           |           |      |      |      |      |      |      |      |       |       |              |              |             |            |             |             |             |             |             | x     | x           |         |
+| LED Ring    | x     |        | x    |       |           |           |      |      |      |      | DATR |      |      |       |       |              |              |             |            |             |             |             |             |             |       |             | Y       |
+| Servo       | x     |        | x    |       |           |           |      | S1   |      | S2   |      |      |      |       |       |              |              |             |            |             |             |             |             |             |       |             | Y       |
+| DHT11       | x     | x      |      |       |           |           | DATA |      |      |      |      |      |      |       |       |              |              |             |            |             |             |             |             |             |       |             |         |
+| I2C 1 + 2   | x     | x      |      |       |           |           |      |      |      |      |      |      |      |       |       |              |              |             |            |             | SDA         | SCL         |             |             |       |             |         |
+| Knobs       |       |        |      |       |           |           |      |      |      |      |      |      |      |       |       |              | x            | x           |            |             |             |             |             |             |       |             |         |
+| Joystick    |       |        |      |       |           |           |      |      |      |      |      |      |      |       |       |              | x            | x           |            |             |             |             | x           |             |       |             |         |
+| Buttons     |       |        |      |       | x         | x         |      |      | x    |      |      |      |      |       |       |              |              |             |            | x           |             |             | x           |             |       |             |         |
+| Builtin LED | x     |        | x    |       |           |           |      |      |      |      |      |      |      |       |       |              |              |             |            |             |             |             |             | x           |       |             |         |
+| Grove 1     | x     |        | x    |       | x         | x         |      |      |      |      |      |      |      |       |       |              |              |             |            |             |             |             |             |             |       |             |         |
+| Grove 2     | x     | x      |      |       |           |           |      |      |      |      |      |      |      |       |       |              |              |             | x          | x           |             |             |             |             |       |             |         |
+| Capacitive  |       |        |      |       | Rcv1      | Rcv2      |      |      |      | Rcv3 | Send |      |      |       |       |              |              |             |            |             |             |             |             |             |       |             |         |
 
 All Grove connectors have the ground (black wire) on the right hand side of the board.
 
