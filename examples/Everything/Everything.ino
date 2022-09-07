@@ -1,10 +1,13 @@
 /*
- * Example program that tries to do everything all at once... It:
- * - shows current temperature and humidit on the screen, and on an LED ring
- * - lights up when the buttons are pressed
- * - uses the buttons to move a dot around the screen
- * - shows whether an RFID tag is present and the ID
- * - uses the joystick (or knobs) to steer a dot on the screen
+ * Everything
+ * 
+ *   Example program that tries to do everything all at once... It:
+ *   
+ *      - shows current temperature and humidit on the screen, and on an LED ring
+ *      - lights up when the buttons are pressed
+ *      - uses the buttons to move a dot around the screen
+ *      - shows whether an RFID tag is present and the ID
+ *      - uses the joystick (or knobs) to steer a dot on the screen
  */
 
 #include <DI.h>
@@ -21,8 +24,8 @@ word SCREEN_BACKGROUND = RGBToScreen(0,50,90);
 word TEXT_COLOR = ST77XX_WHITE;
 
 void setup() {
-  // put your setup code here, to run once:
-  setupEverything(true);
+  Serial.begin(9600);
+  setupEverything();
   showDISplash();
   delay(1000);
   SCREEN.fillRect(0,0, 128, 128, SCREEN_BACKGROUND );

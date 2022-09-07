@@ -1,3 +1,15 @@
+/*
+ *  Capacitive Sensors
+ *  
+ *    The DI Board has Capacitive Touch sensors connected to pins D0, D1 and D2
+ *    
+ *    This example maps the input to the NeoPixels to left half, center and right half of the
+ *    pixel circle. 
+ *    
+ *    Note that you can press multiple Capacitive Touch sensors at the same time.
+ */
+
+
 #include <DI.h>
 
 void setup()                    
