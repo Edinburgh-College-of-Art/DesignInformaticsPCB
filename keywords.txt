@@ -1,9 +1,78 @@
+#######################################
 # Syntax Coloring Map For DI PCB
+#######################################
 
+#######################################
 # Datatypes (KEYWORD1)
+#######################################
 
+LEDS	KEYWORD1
+TEMP_SENSOR	KEYWORD1
+RFID_READER	KEYWORD1
+SCREEN	KEYWORD1
+BUTTON_UP	KEYWORD1
+BUTTON_LEFT	KEYWORD1
+BUTTON_CENTRE	KEYWORD1
+BUTTON_RIGHT	KEYWORD1
+BUTTON_DOWN	KEYWORD1
+JOYSTICK_X	KEYWORD1
+JOYSTICK_Y	KEYWORD1
+KNOB_1	KEYWORD1
+KNOB_2	KEYWORD1
+CAPACITIVE_TOP	KEYWORD1
+CAPACITIVE_MIDDLE	KEYWORD1
+CAPACITIVE_BOTTOM	KEYWORD1
+CAP_VALUE_TOP	KEYWORD1
+CAP_VALUE_MIDDLE	KEYWORD1
+CAP_VALUE_BOTTOM	KEYWORD1
+ACCEL_X	KEYWORD1
+ACCEL_Y	KEYWORD1
+ACCEL_Z	KEYWORD1
+GYRO_X	KEYWORD1
+GYRO_Y	KEYWORD1
+GYRO_Z	KEYWORD1
+LOOP_COUNTER	KEYWORD1
+FIRST	KEYWORD1
+CURRENT_TEMP	KEYWORD1
+CURRENT_HUMIDITY	KEYWORD1
+RFID_PRESENT	KEYWORD1
+RFID_ID	KEYWORD1
+RFID_PERSISTENCE	KEYWORD1
+DI.h	KEYWORD1
+
+#######################################
 # Methods and Functions (KEYWORD2)
+#######################################
 
+setupEverything	KEYWORD2
+startNFC	KEYWORD2
+startSPI	KEYWORD2
+startButtons	KEYWORD2
+startScreen	KEYWORD2
+startLEDs	KEYWORD2
+startTemperature	KEYWORD2
+startIMU	KEYWORD2
+updateLoopCounter	KEYWORD2
+updateWatchdogLED	KEYWORD2
+outputLEDs	KEYWORD2
+updateTemperature	KEYWORD2
+updateButtons	KEYWORD2
+updateRFID	KEYWORD2
+updateKnobs	KEYWORD2
+updateCapacitiveSensors	KEYWORD2
+updateIMU	KEYWORD2
+oneIn	KEYWORD2
+colorWipe	KEYWORD2
+RGBToScreen	KEYWORD2
+showDISplash	KEYWORD2
+animateDISplash	KEYWORD2
+buttonsToLeds	KEYWORD2
+temperatureToLEDRing	KEYWORD2
+
+#######################################
 # Instances (KEYWORD2)
+#######################################
 
+#######################################
 # Constants (LITERAL1)
+#######################################
