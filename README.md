@@ -17,6 +17,10 @@ The main features of the board are here:
 * **Light and Gesture** - a connector for the Proximity, Gesture and Color sensor found on the other arduino boards, the [APDS9960](https://learn.adafruit.com/adafruit-apds9960-breakout).
 * **Capacitive Electrodes** - at the top left of the board, there are some hidden capacitive electrodes. These work like buttons, but also sense when you're nearby using the [Capacitive Sensing](https://playground.arduino.cc/Main/CapacitiveSensor/) library.
 
+## Note on 5V Pin
+
+The Arduino Nano 33 IoT `5v` pin is not connected by default. For components that draw power from the `5v` pin you must either bridge the tags on the underside of the Arduino or bridge the `VIN` pin to the `5v` pin.
+
 ## Code
 
 To try an make the learning curve a bit easier, the library sets up all of the devices connected to the board (and on the Arduino) and gives you objects that represent them. You get:
