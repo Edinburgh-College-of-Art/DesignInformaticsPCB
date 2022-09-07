@@ -32,42 +32,11 @@ void setup() {
 void loop() {
   updateButtons(false);
 
-  if ( BUTTON_UP.fell() ) {
-    uint32_t currentColour = LEDS.getPixelColor(currentLedIndex);
-    switch (currentColourSelection)
-    {
-      case RED:
-        currentColour += ((currentColour & 0xFF0000) != 0xFF0000) ? 0x330000 : 0;
-        break;
-      case GREEN:
-        currentColour += ((currentColour & 0x00FF00) != 0x00FF00) ? 0x003300 : 0;
-        break;
-      case BLUE:
-        currentColour += ((currentColour & 0x0000FF) != 0x0000FF) ? 0x000033 : 0;
-        break;
-    }
-    LEDS.setPixelColor(currentLedIndex , currentColour);
-    LEDS.show(); // Update strip with new contents
-  }
-  if ( BUTTON_DOWN.fell() )
-  {
-    uint32_t currentColour = LEDS.getPixelColor(currentLedIndex);
-    switch (currentColourSelection)
-    {
-      case RED:
-        currentColour -= (currentColour & 0xFF0000) ? 0x330000 : 0;
-        break;
-      case GREEN:
-        currentColour -= (currentColour & 0x00FF00) ? 0x003300 : 0;
-        break;
-      case BLUE:
-        currentColour -= (currentColour & 0x0000FF) ? 0x000033 : 0;
-        break;
-    }
+  if ( BUTTON_UP.fell() )
+    incCurrentColour()
 
-    LEDS.setPixelColor(currentLedIndex , currentColour);
-    LEDS.show(); // Update strip with new contents
-  }
+  if ( BUTTON_DOWN.fell() )
+    decCurrentColour();
 
   if ( BUTTON_LEFT.fell() )
     decLedIndex();
@@ -117,6 +86,45 @@ void decLedIndex()
   if (currentLedIndex == 0)
     currentLedIndex = 1;
   showCurrentPixel();
+}
+
+void incCurrentColour()
+{
+  uint32_t currentColour = LEDS.getPixelColor(currentLedIndex);
+  switch (currentColourSelection)
+  {
+    case RED:
+      currentColour += ((currentColour & 0xFF0000) != 0xFF0000) ? 0x330000 : 0;
+      break;
+    case GREEN:
+      currentColour += ((currentColour & 0x00FF00) != 0x00FF00) ? 0x003300 : 0;
+      break;
+    case BLUE:
+      currentColour += ((currentColour & 0x0000FF) != 0x0000FF) ? 0x000033 : 0;
+      break;
+  }
+  LEDS.setPixelColor(currentLedIndex , currentColour);
+  LEDS.show(); // Update strip with new contents
+}
+
+void decCurrentColour()
+{
+  uint32_t currentColour = LEDS.getPixelColor(currentLedIndex);
+  switch (currentColourSelection)
+  {
+    case RED:
+      currentColour -= (currentColour & 0xFF0000) ? 0x330000 : 0;
+      break;
+    case GREEN:
+      currentColour -= (currentColour & 0x00FF00) ? 0x003300 : 0;
+      break;
+    case BLUE:
+      currentColour -= (currentColour & 0x0000FF) ? 0x000033 : 0;
+      break;
+  }
+
+  LEDS.setPixelColor(currentLedIndex , currentColour);
+  LEDS.show(); // Update strip with new contents
 }
 
 void showCurrentPixel()
