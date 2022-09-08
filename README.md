@@ -40,35 +40,35 @@ To try an make the learning curve a bit easier, the library sets up all of the d
 Connections for the various ports and functions
 <!-- ![Connections](Connections.png) -->
 
-| ST6635       | RC522 | Grove BTN | LED Ring | Servo | DHT11 | I2C 1 + 2 | Knobs | Joystick | Buttons | Builtin LED | Grove 1 | Grove 2 | Capacitive |      |
-| ------------ | ----- | --------- | -------- | ----- | ----- | --------- | ----- | -------- | ------- | ----------- | ------- | ------- | ---------- | ---- |
-| `GND`        | x     | x         | x        | x     | x     | x         | x     |          |         |             | x       | x       | x          |      |
-| `3.3v`       | x     | x         | x        |       |       | x         | x     |          |         |             |         |         | x          |      |
-| `5v`         |       |           |          | x     | x     |           |       |          |         |             | x       | x       |            |      |
-| `RST`        | RST   | RST       |          |       |       |           |       |          |         |             |         |         |            |      |
-| `D0 / Tx`    |       |           |          |       |       |           |       |          |         | x           |         | x       |            | Rcv1 |
-| `D1 / Rx`    |       |           |          |       |       |           |       |          |         | x           |         | x       |            | Rcv2 |
-| `D2`         |       |           |          |       |       | DATA      |       |          |         |             |         |         |            |      |
-| `D3`         |       |           |          |       | S1    |           |       |          |         |             |         |         |            |      |
-| `D4`         |       |           |          |       |       |           |       |          |         | x           |         |         |            |      |
-| `D5`         |       |           |          |       | S2    |           |       |          |         |             |         |         |            | Rcv3 |
-| `D6`         |       |           |          | DATR  |       |           |       |          |         |             |         |         |            | Send |
-| `D7`         | CCS   |           |          |       |       |           |       |          |         |             |         |         |            |      |
-| `D8`         | TCS   |           |          |       |       |           |       |          |         |             |         |         |            |      |
-| `D9 `        | DC    |           |          |       |       |           |       |          |         |             |         |         |            |      |
-| `D10`        |       | SDA       |          |       |       |           |       |          |         |             |         |         |            |      |
-| `D11 / MOSI` | SI    | SI        |          |       |       |           |       |          |         |             |         |         |            |      |
-| `D12 / MISO` | SO    | SO        |          |       |       |           |       | x        | x       |             |         |         |            |      |
-| `D13 / SCK`  | SCL   | SCL       |          |       |       |           |       | x        | x       |             |         |         |            |      |
-| `D14 / A0`   |       |           |          |       |       |           |       |          |         |             |         |         | x          |      |
-| `D15 / A10`  |       |           |          |       |       |           |       |          |         | x           |         |         | x          |      |
-| `D16 / A19`  |       |           |          |       |       |           | SDA   |          |         |             |         |         |            |      |
-| `D17 / A18`  |       |           |          |       |       |           | SCL   |          |         |             |         |         |            |      |
-| `D18 / SDA`  |       |           |          |       |       |           |       |          | x       | x           |         |         |            |      |
-| `D19 / SCL`  |       |           |          |       |       |           |       |          |         |             | x       |         |            |      |
-| `D20`        |       |           | x        |       |       |           |       |          |         |             |         |         |            |      |
-| `D21 / A11`  |       |           | x        |       |       |           |       |          |         |             |         |         |            |      |
-| working      | Y     | Y         |          | Y     | Y     |           |       |          |         |             |         |         |            |      |
+|              | ST6635 | RC522 | Grove BTN | LED Ring | Servo | DHT11 | I2C 1 + 2 | Knobs | Joystick | Buttons | Builtin LED | Grove 1 | Grove 2 | Capacitive | 
+| ------------ | ------ | ----- | --------- | -------- | ----- | ----- | --------- | ----- | -------- | ------- | ----------- | ------- | ------- | ---------- |
+| `GND`        | x      | x     | x         | x        | x     | x     | x         |       |          |         | x           | x       | x       |            |
+| `3.3v`       | x      | x     | x         |          |       | x     | x         |       |          |         |             |         | x       |            |
+| `5v`         |        |       |           | x        | x     |       |           |       |          |         | x           | x       |         |            |
+| `RST`        | RST    | RST   |           |          |       |       |           |       |          |         |             |         |         |            |
+| `D0 / Tx`    |        |       |           |          |       |       |           |       |          | x       |             | x       |         | Rcv1       |
+| `D1 / Rx`    |        |       |           |          |       |       |           |       |          | x       |             | x       |         | Rcv2       |
+| `D2`         |        |       |           |          |       | DATA  |           |       |          |         |             |         |         |            |
+| `D3`         |        |       |           |          | S1    |       |           |       |          |         |             |         |         |            |
+| `D4`         |        |       |           |          |       |       |           |       |          | x       |             |         |         |            |
+| `D5`         |        |       |           |          | S2    |       |           |       |          |         |             |         |         | Rcv3       |
+| `D6`         |        |       |           | DATR     |       |       |           |       |          |         |             |         |         | Send       |
+| `D7`         | CCS    |       |           |          |       |       |           |       |          |         |             |         |         |            |
+| `D8`         | TCS    |       |           |          |       |       |           |       |          |         |             |         |         |            |
+| `D9 `        | DC     |       |           |          |       |       |           |       |          |         |             |         |         |            |
+| `D10`        |        | SDA   |           |          |       |       |           |       |          |         |             |         |         |            |
+| `D11 / MOSI` | SI     | SI    |           |          |       |       |           |       |          |         |             |         |         |            |
+| `D12 / MISO` | SO     | SO    |           |          |       |       |           | x     | x        |         |             |         |         |            |
+| `D13 / SCK`  | SCL    | SCL   |           |          |       |       |           | x     | x        |         |             |         |         |            |
+| `D14 / A0`   |        |       |           |          |       |       |           |       |          |         |             |         | x       |            |
+| `D15 / A10`  |        |       |           |          |       |       |           |       |          | x       |             |         | x       |            |
+| `D16 / A19`  |        |       |           |          |       |       | SDA       |       |          |         |             |         |         |            |
+| `D17 / A18`  |        |       |           |          |       |       | SCL       |       |          |         |             |         |         |            |
+| `D18 / SDA`  |        |       |           |          |       |       |           |       | x        | x       |             |         |         |            |
+| `D19 / SCL`  |        |       |           |          |       |       |           |       |          |         | x           |         |         |            |
+| `D20`        |        |       | x         |          |       |       |           |       |          |         |             |         |         |            |
+| `D21 / A11`  |        |       | x         |          |       |       |           |       |          |         |             |         |         |            |
+| working      | Y      | Y     |           | Y        | Y     |       |           |       |          |         |             |         |         |            |
 
 
 All Grove connectors have the ground (black wire) on the right hand side of the board.
