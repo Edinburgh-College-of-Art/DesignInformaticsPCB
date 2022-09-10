@@ -1,5 +1,5 @@
 /*
-   LED Demo
+   Simple LED Demo
 
    This example runs through the basic processing for interacting with the onboard LEDs
 

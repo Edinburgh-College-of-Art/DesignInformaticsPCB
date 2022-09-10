@@ -1,7 +1,7 @@
 /*
     Simple Capacative touch
 
-    This example demonstrates the  updating the pre-defined CAP_VALUE vairables.
+    This example demonstrates how to use the pre-defined CAP_VALUE vairables.
 
     Open the Serial Plotter to get a good idea as to the range of values
 

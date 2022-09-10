@@ -1,5 +1,5 @@
 /*
- * Screen Test
+ * Simple Display Test
  * 
  *  A simple example of the ST7735R TFT Screen for sanity checking
  */
