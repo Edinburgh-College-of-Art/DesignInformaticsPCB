@@ -11,6 +11,7 @@
 #include <Bounce2.h>
 #include <Adafruit_GFX.h>    // Core graphics library
 #include <Adafruit_ST7735.h> // Hardware-specific library for ST7735
+#include <Arduino_LSM6DS3.h>
 #include <DI_Defs.h> //general definitions
 #include <CapacitiveSensor.h>
 
@@ -71,7 +72,8 @@ void startScreen(bool print = true);
 void startLEDs(bool print = true);
 /// Run setup for connected Temperture sensor
 void startTemperature(bool print = true);
-
+/// Run setup for Nano 33 IoT on Board IMU LSM6DS3
+void startIMU(bool print = true);
 //------------------------------------------------------------------
 // Update outputs/context
 /// increment the internal loop counter by 1
