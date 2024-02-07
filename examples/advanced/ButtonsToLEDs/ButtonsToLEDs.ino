@@ -33,7 +33,7 @@ void loop() {
   updateButtons(false);
 
   if ( BUTTON_UP.fell() )
-    incCurrentColour()
+    incCurrentColour();
 
   if ( BUTTON_DOWN.fell() )
     decCurrentColour();
