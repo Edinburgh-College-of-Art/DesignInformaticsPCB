@@ -56,6 +56,9 @@ extern bool RFID_PRESENT;
 extern char RFID_ID[20];
 extern int RFID_PERSISTENCE;
 
+extern float ACCEL_X, ACCEL_Y, ACCEL_Z;
+extern float GYRO_X, GYRO_Y, GYRO_Z;
+
 //------------------------------------------------------------------
 // Setup functions
 /// Run all setup functions for the DI Board
@@ -102,6 +105,8 @@ void updateRFID(bool print=true);
 void updateKnobs();
 /// Update values of CAP_VALUE_TOP, CAP_VALUE_BOTTOM, CAP_VALUE_MIDDLE
 void updateCapacitiveSensors();
+//
+void updateIMU();
 
 //------------------------------------------------------------------
 // Utility functions
